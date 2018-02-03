@@ -1,14 +1,6 @@
 <html>
   <head>
     <title>h264-live-player web client demo</title>
-    <style>
-    canvas {
-      transform: rotate3d(0,0,90);
-      -webkit-transform: rotate3d(0,0,90);
-      transform-origin: 50%, 50%;
-      -webkit-transform-origin: 50%, 50%;
-    }
-    </style>
   </head>
   <body>
 
@@ -22,6 +14,8 @@
     <script type="text/javascript">
 
 var canvas = document.createElement("canvas");
+var ctx = canvas.getContext("2d");
+ctx.rotate(90);
 document.body.appendChild(canvas);
 
 // Create h264 player
